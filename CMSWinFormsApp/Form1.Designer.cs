@@ -65,6 +65,7 @@
             workerToolStripMenuItem.ShortcutKeys = Keys.Alt | Keys.W;
             workerToolStripMenuItem.Size = new Size(77, 24);
             workerToolStripMenuItem.Text = "&Worker";
+            workerToolStripMenuItem.Click += workerToolStripMenuItem_Click;
             // 
             // customerToolStripMenuItem
             // 
@@ -72,6 +73,7 @@
             customerToolStripMenuItem.ShortcutKeys = Keys.Alt | Keys.C;
             customerToolStripMenuItem.Size = new Size(94, 24);
             customerToolStripMenuItem.Text = "&Customer";
+            customerToolStripMenuItem.Click += customerToolStripMenuItem_Click;
             // 
             // jobDetailsToolStripMenuItem
             // 
@@ -79,6 +81,7 @@
             jobDetailsToolStripMenuItem.ShortcutKeys = Keys.Alt | Keys.J;
             jobDetailsToolStripMenuItem.Size = new Size(102, 24);
             jobDetailsToolStripMenuItem.Text = "Job Details";
+            jobDetailsToolStripMenuItem.Click += jobDetailsToolStripMenuItem_Click;
             // 
             // reportsToolStripMenuItem
             // 
@@ -86,6 +89,7 @@
             reportsToolStripMenuItem.ShortcutKeys = Keys.Alt | Keys.R;
             reportsToolStripMenuItem.Size = new Size(81, 24);
             reportsToolStripMenuItem.Text = "&Reports";
+            reportsToolStripMenuItem.Click += reportsToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
@@ -93,6 +97,7 @@
             exitToolStripMenuItem.ShortcutKeys = Keys.Alt | Keys.X;
             exitToolStripMenuItem.Size = new Size(49, 24);
             exitToolStripMenuItem.Text = "E&xit";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // Form1
             // 

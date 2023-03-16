@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblCarNo = new Label();
             lblAddress = new Label();
             lblName = new Label();
@@ -43,6 +44,8 @@
             btnExit = new Button();
             btnPrevious = new Button();
             btnNext = new Button();
+            errCustForm = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errCustForm).BeginInit();
             SuspendLayout();
             // 
             // lblCarNo
@@ -126,6 +129,7 @@
             btnSave.TabIndex = 9;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // btnEdit
             // 
@@ -153,6 +157,7 @@
             btnExit.TabIndex = 12;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
             // btnPrevious
             // 
@@ -171,6 +176,10 @@
             btnNext.TabIndex = 14;
             btnNext.Text = "Next";
             btnNext.UseVisualStyleBackColor = true;
+            // 
+            // errCustForm
+            // 
+            errCustForm.ContainerControl = this;
             // 
             // CustomerForm
             // 
@@ -194,6 +203,8 @@
             Controls.Add(lblCarNo);
             Name = "CustomerForm";
             Text = "CustomerForm";
+            Load += CustomerForm_Load;
+            ((System.ComponentModel.ISupportInitialize)errCustForm).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -215,5 +226,6 @@
         private Button btnExit;
         private Button btnPrevious;
         private Button btnNext;
+        private ErrorProvider errCustForm;
     }
 }

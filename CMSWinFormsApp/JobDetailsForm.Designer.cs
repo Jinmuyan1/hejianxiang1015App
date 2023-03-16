@@ -69,7 +69,6 @@
             txtTuning = new TextBox();
             txtKMs = new TextBox();
             txtWorkerId = new TextBox();
-            txtJobDate = new TextBox();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -82,6 +81,7 @@
             btnAdd = new Button();
             btnLoad = new Button();
             btnExit = new Button();
+            dateTimePicker1 = new DateTimePicker();
             SuspendLayout();
             // 
             // label1
@@ -279,6 +279,8 @@
             txtCarNo.Name = "txtCarNo";
             txtCarNo.Size = new Size(192, 27);
             txtCarNo.TabIndex = 22;
+            txtCarNo.TextChanged += txtCarNo_TextChanged;
+            txtCarNo.Leave += txtCarNo_Leave;
             // 
             // txtRemarks
             // 
@@ -416,13 +418,6 @@
             txtWorkerId.Size = new Size(192, 27);
             txtWorkerId.TabIndex = 42;
             // 
-            // txtJobDate
-            // 
-            txtJobDate.Location = new Point(146, 60);
-            txtJobDate.Name = "txtJobDate";
-            txtJobDate.Size = new Size(192, 27);
-            txtJobDate.TabIndex = 43;
-            // 
             // button1
             // 
             button1.Location = new Point(253, 488);
@@ -493,6 +488,7 @@
             btnUpdate.TabIndex = 52;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnCancelAll
             // 
@@ -529,12 +525,21 @@
             btnExit.TabIndex = 55;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(146, 56);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(192, 27);
+            dateTimePicker1.TabIndex = 56;
             // 
             // JobDetailsForm
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 697);
+            Controls.Add(dateTimePicker1);
             Controls.Add(btnExit);
             Controls.Add(btnAdd);
             Controls.Add(btnLoad);
@@ -547,7 +552,6 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(txtJobDate);
             Controls.Add(txtWorkerId);
             Controls.Add(txtKMs);
             Controls.Add(txtTuning);
@@ -638,7 +642,6 @@
         private TextBox txtTuning;
         private TextBox txtKMs;
         private TextBox txtWorkerId;
-        private TextBox txtJobDate;
         private Button button1;
         private Button button2;
         private Button button3;
@@ -651,5 +654,6 @@
         private Button btnAdd;
         private Button btnLoad;
         private Button btnExit;
+        private DateTimePicker dateTimePicker1;
     }
 }
